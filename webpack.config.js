@@ -34,7 +34,7 @@ module.exports = {
         }),
 
         new HtmlWebpackPlugin({
-            template: path.join(__dirname, 'index.ejs'),
+            template: path.join(__dirname, 'index.html'),
             title: appHtmlTitle
         })
     ],
@@ -92,6 +92,18 @@ module.exports = {
                 options: {
                     name: '[path][name].[ext]'
                 }
+            },
+
+            // FONTS
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'fonts/'
+                    }
+                }]
             }
         ]
     }

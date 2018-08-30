@@ -1,0 +1,26 @@
+body {
+  font-family: 'samsung500';
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+a {
+  color: $tomato;
+  text-decoration: none;
+  
+  &:hover {
+      border-bottom: dashed 1px $tomato;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'samsung400';
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
